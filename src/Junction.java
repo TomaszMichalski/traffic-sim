@@ -32,6 +32,87 @@ public class Junction
     }
 
     /*
+        Returns the connected road seen as 'ahead' road from current param Road
+        Return null if there is no such road
+     */
+    public Road getStraight(Road current)
+    {
+        for(Road connector : connectors)
+        {
+            if(connector != current && connector.getOrientation() == current.getOrientation())
+                return connector;
+        }
+        return null;
+    }
+
+    /*
+        Returns the connected road seen as 'left turn' road from current param Road
+        Return null if there is no such road
+     */
+    public Road getLeft(Road current)
+    {
+        for(Road connector : connectors)
+        {
+            if(current.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //for horizontal roads
+            {
+                if(connector.getOrientation() == Road.RoadOrientation.RO_VERTICAL) //seek for vertical connectors
+                {
+                    if(connector.getRoadLine().getStartY() > current.getRoadLine().getStartY() //if the road lies below then it's y-coord is greater
+                            || connector.getRoadLine().getEndY() > current.getRoadLine().getStartY())
+                    {
+                        return connector;
+                    }
+                }
+            }
+            else //for vertical roads
+            {
+                if(connector.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //seek for horizontal connectors
+                {
+                    if(connector.getRoadLine().getStartX() < current.getRoadLine().getStartX() //if the road lies on the left then it's x-coord is smaller
+                            || connector.getRoadLine().getEndX() < current.getRoadLine().getStartX())
+                    {
+                        return connector;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    /*
+        Returns the connected road seen as 'right turn' road from current param Road
+        Return null if there is no such road
+     */
+    public Road getRight(Road current)
+    {
+        for(Road connector : connectors)
+        {
+            if(current.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //for horizontal roads
+            {
+                if(connector.getOrientation() == Road.RoadOrientation.RO_VERTICAL) //seek for vertical connectors
+                {
+                    if(connector.getRoadLine().getStartY() < current.getRoadLine().getStartY() //if the road lies abowe then it's y-coord is smaller
+                            || connector.getRoadLine().getEndY() < current.getRoadLine().getStartY())
+                    {
+                        return connector;
+                    }
+                }
+            }
+            else //for vertical roads
+            {
+                if(connector.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //seek for horizontal connectors
+                {
+                    if(connector.getRoadLine().getStartX() > current.getRoadLine().getStartX() //if the road lies on the right then it's x-coord is greater
+                            || connector.getRoadLine().getEndX() > current.getRoadLine().getStartX())
+                    {
+                        return connector;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    /*
         Return the size of a junction - number of road connected to it (1-4)
      */
     public int getSize()
