@@ -37,6 +37,7 @@ public class Car implements IVehicle
         color = Color.rgb(r,g,b);
         speed = 0.01;
         halt = true;
+        intention = Intention.STRAIGHT;
     }
 
     public void run()
@@ -61,6 +62,14 @@ public class Car implements IVehicle
         System.out.println(this);
     }
 
+    public Intention getIntention()
+    {
+        return intention;
+    }
+
+    /*
+        Return the next junction the car is heading to
+     */
     public Junction getIncomingJunction()
     {
         Junction incomingJunction;
@@ -141,6 +150,13 @@ public class Car implements IVehicle
         return "Car [x=" + posX + ",y=" + posY + "," + orientation + ",color=" + color + "," + halt + "]";
     }
 
+    public enum Intention
+    {
+        STRAIGHT,
+        LEFT,
+        RIGHT
+    }
+
     private double posX;
     private double posY;
     private VehicleOrientation orientation;
@@ -148,4 +164,5 @@ public class Car implements IVehicle
     private Road currentRoad;
     private double speed;
     private boolean halt;
+    private Intention intention;
 }
