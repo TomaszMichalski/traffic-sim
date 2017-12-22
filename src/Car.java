@@ -3,11 +3,11 @@ import javafx.scene.paint.Paint;
 
 import java.util.Random;
 
-public class Car implements IVehicle
+public class Car extends Vehicle
 {
     public Car(Road road)
     {
-        currentRoad = road;
+        super(road);
         Random rand = new Random();
         //setting place for the car
         if(road.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL)
@@ -36,8 +36,8 @@ public class Car implements IVehicle
         int b = rand.nextInt(255);
         color = Color.rgb(r,g,b);
         speed = 0.01;
-        halt = true;
-        intention = Intention.STRAIGHT;
+        halt = false;
+        randomizeIntention();
     }
 
     public void run()
@@ -46,10 +46,11 @@ public class Car implements IVehicle
             move();
     }
 
-    private void move()
+    protected void move()
     {
         if(!halt)
         {
+            //drive forward
             if(orientation == VehicleOrientation.VO_NORTH)
                 posY -= speed;
             else if(orientation == VehicleOrientation.VO_EAST)
@@ -58,91 +59,81 @@ public class Car implements IVehicle
                 posY += speed;
             else if(orientation == VehicleOrientation.VO_WEST)
                 posX -= speed;
+            //if the car is closing to a junction, perform a turn-action
+            if(getIncomingJunctionDistance() < speed)
+                makeTurn();
         }
         System.out.println(this);
+    }
+
+    /*
+        Performs an action based on the car'c current Intention value
+        If intended action cannot be performed, car changes it's intention and tries to perform the turn again
+     */
+    protected void makeTurn()
+    {
+        Junction incomingJunction = getIncomingJunction();
+        if(intention == Intention.STRAIGHT)
+        {
+            if(incomingJunction.getStraight(currentRoad) != null) //if there is such road
+            {
+
+            }
+            else
+            {
+                if(incomingJunction.getSize() == 1) //if the road is a dead end
+                {
+                    //perform a turnaround
+                    if(orientation == VehicleOrientation.VO_NORTH) orientation = VehicleOrientation.VO_SOUTH;
+                    else if(orientation == VehicleOrientation.VO_SOUTH) orientation = VehicleOrientation.VO_NORTH;
+                    else if(orientation == VehicleOrientation.VO_WEST) orientation = VehicleOrientation.VO_EAST;
+                    else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_WEST;
+                }
+                else
+                {
+                    randomizeIntention();
+                    makeTurn();
+                }
+            }
+        }
+        else if(intention == Intention.LEFT)
+        {
+            if(incomingJunction.getLeft(currentRoad) != null) //if there is such road
+            {
+
+            }
+            else
+            {
+                randomizeIntention();
+                makeTurn();
+            }
+        }
+        else if(intention == Intention.RIGHT)
+        {
+            if(incomingJunction.getRight(currentRoad) != null) //if there is such road
+            {
+
+            }
+            else
+            {
+                randomizeIntention();
+                makeTurn();
+            }
+        }
+    }
+
+    private void randomizeIntention()
+    {
+        Random rand = new Random();
+        int random = rand.nextInt();
+        if(random % 3 == 0) intention = Intention.LEFT;
+        else if(random % 3 == 1) intention = Intention.STRAIGHT;
+        else intention = Intention.RIGHT;
     }
 
     public Intention getIntention()
     {
         return intention;
-    }
-
-    /*
-        Return the next junction the car is heading to
-     */
-    public Junction getIncomingJunction()
-    {
-        Junction incomingJunction;
-        if(currentRoad.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //for horizontal roads
-        {
-            if(orientation == IVehicle.VehicleOrientation.VO_EAST)
-            {
-                if(currentRoad.getStartJunction().getPosX() > posX)
-                    incomingJunction = currentRoad.getStartJunction();
-                else
-                    incomingJunction = currentRoad.getEndJunction();
-            }
-            else
-            {
-                if(currentRoad.getStartJunction().getPosX() < posX)
-                    incomingJunction = currentRoad.getStartJunction();
-                else
-                    incomingJunction = currentRoad.getEndJunction();
-            }
-        }
-        else //for vertical roads
-        {
-            if(orientation == IVehicle.VehicleOrientation.VO_NORTH)
-            {
-                if(currentRoad.getStartJunction().getPosY() < posY)
-                    incomingJunction = currentRoad.getStartJunction();
-                else
-                    incomingJunction = currentRoad.getEndJunction();
-            }
-            else
-            {
-                if(currentRoad.getStartJunction().getPosY() > posY)
-                    incomingJunction = currentRoad.getStartJunction();
-                else
-                    incomingJunction = currentRoad.getEndJunction();
-            }
-        }
-        return incomingJunction;
-    }
-
-    public void halt(boolean halt)
-    {
-        this.halt = halt;
-    }
-
-    public double getPosX()
-    {
-        return posX;
-    }
-
-    public double getPosY()
-    {
-        return posY;
-    }
-
-    public VehicleOrientation getOrientation()
-    {
-        return orientation;
-    }
-
-    public void setOrientation(VehicleOrientation newOrientation)
-    {
-        orientation = newOrientation;
-    }
-
-    public Paint getColor()
-    {
-        return color;
-    }
-
-    public Road getCurrentRoad()
-    {
-        return currentRoad;
     }
 
     public String toString()
@@ -157,12 +148,5 @@ public class Car implements IVehicle
         RIGHT
     }
 
-    private double posX;
-    private double posY;
-    private VehicleOrientation orientation;
-    private Paint color;
-    private Road currentRoad;
-    private double speed;
-    private boolean halt;
     private Intention intention;
 }
