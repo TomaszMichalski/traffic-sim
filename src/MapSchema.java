@@ -10,7 +10,7 @@ public class MapSchema
     {
         roads = new ArrayList<Road>();
         junctions = new ArrayList<Junction>();
-        vehicles = new ArrayList<IVehicle>();
+        vehicles = new ArrayList<Vehicle>();
         SIZE = size;
     }
 
@@ -24,7 +24,7 @@ public class MapSchema
         junctions.add(junction);
     }
 
-    public void addVehicle(IVehicle vehicle)
+    public void addVehicle(Vehicle vehicle)
     {
         vehicles.add(vehicle);
     }
@@ -39,7 +39,7 @@ public class MapSchema
         return junctions;
     }
 
-    public ArrayList<IVehicle> getVehicles() { return vehicles; }
+    public ArrayList<Vehicle> getVehicles() { return vehicles; }
 
     public int getSize()
     {
@@ -48,6 +48,6 @@ public class MapSchema
 
     private ArrayList<Road> roads;
     private ArrayList<Junction> junctions;
-    private ArrayList<IVehicle> vehicles;
+    private ArrayList<Vehicle> vehicles;
     private final int SIZE;
 }

@@ -12,7 +12,7 @@ public interface IMapViewer extends Runnable
     /*
         Returns viewer's set vehicle size (length) as used in the show() method
      */
-    public double getVehicleSize(IVehicle vehicle);
+    public double getVehicleSize(Vehicle vehicle);
     /*
         Return viewer's set junction size as used in the show() method
      */

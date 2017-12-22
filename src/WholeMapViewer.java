@@ -38,28 +38,28 @@ public class WholeMapViewer implements IMapViewer
             gc.strokeLine(roadLine.getStartX() * SCALE + OFFSET, roadLine.getStartY() * SCALE,
                               roadLine.getEndX() * SCALE + OFFSET, roadLine.getEndY() * SCALE);
         }
-        for(IVehicle vehicle : mapSchema.getVehicles())
+        for(Vehicle vehicle : mapSchema.getVehicles())
         {
             if(vehicle instanceof Car)
             {
                 Car car = (Car)vehicle;
                 gc.setFill(car.getColor());
-                if(car.getOrientation() == IVehicle.VehicleOrientation.VO_NORTH)
+                if(car.getOrientation() == Vehicle.VehicleOrientation.VO_NORTH)
                 {
                     gc.fillRect(car.getPosX() * SCALE + OFFSET, car.getPosY() * SCALE,
                                 LINE_WIDTH / 2 * SCALE, LINE_WIDTH * SCALE);
                 }
-                else if(car.getOrientation() == IVehicle.VehicleOrientation.VO_EAST)
+                else if(car.getOrientation() == Vehicle.VehicleOrientation.VO_EAST)
                 {
                     gc.fillRect((car.getPosX() - LINE_WIDTH) * SCALE + OFFSET, car.getPosY() * SCALE,
                                     LINE_WIDTH * SCALE, LINE_WIDTH / 2 * SCALE);
                 }
-                else if(car.getOrientation() == IVehicle.VehicleOrientation.VO_SOUTH)
+                else if(car.getOrientation() == Vehicle.VehicleOrientation.VO_SOUTH)
                 {
                     gc.fillRect( (car.getPosX() - LINE_WIDTH / 2) * SCALE + OFFSET, (car.getPosY() - LINE_WIDTH) * SCALE,
                                     LINE_WIDTH / 2 * SCALE, LINE_WIDTH * SCALE);
                 }
-                else if(car.getOrientation() == IVehicle.VehicleOrientation.VO_WEST)
+                else if(car.getOrientation() == Vehicle.VehicleOrientation.VO_WEST)
                 {
                     gc.fillRect( car.getPosX() * SCALE + OFFSET, (car.getPosY() - LINE_WIDTH / 2) * SCALE,
                                         LINE_WIDTH * SCALE, LINE_WIDTH / 2 * SCALE);
@@ -74,7 +74,7 @@ public class WholeMapViewer implements IMapViewer
         return mapSchema;
     }
 
-    public double getVehicleSize(IVehicle vehicle)
+    public double getVehicleSize(Vehicle vehicle)
     {
         if(vehicle instanceof Car)
         {

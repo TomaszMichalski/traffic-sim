@@ -23,7 +23,7 @@ public class SimulationEngine implements ISimulationEngine
 
     public void run()
     {
-        for (IVehicle vehicle : mapViewer.getMapSchema().getVehicles()) {
+        for (Vehicle vehicle : mapViewer.getMapSchema().getVehicles()) {
             new Thread(vehicle).start();
         }
         new Thread(collisionEngine).start();
