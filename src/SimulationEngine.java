@@ -1,3 +1,4 @@
+import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 
 public class SimulationEngine implements ISimulationEngine
@@ -16,9 +17,9 @@ public class SimulationEngine implements ISimulationEngine
         }
     }
 
-    public Canvas getSimulationView()
+    public void setCanvas(Canvas canvas)
     {
-        return mapViewer.show();
+        this.canvas = canvas;
     }
 
     public void run()
@@ -27,9 +28,19 @@ public class SimulationEngine implements ISimulationEngine
             new Thread(vehicle).start();
         }
         new Thread(collisionEngine).start();
+
+        new AnimationTimer()
+        {
+            @Override
+            public void handle(long now)
+            {
+                mapViewer.show(canvas);
+            }
+        }.start();
     }
 
     private IMapViewer mapViewer;
     private IMapGenerator mapGenerator;
     private ICollisionEngine collisionEngine;
+    private Canvas canvas;
 }

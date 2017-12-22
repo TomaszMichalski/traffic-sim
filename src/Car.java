@@ -63,7 +63,7 @@ public class Car extends Vehicle
             if(getIncomingJunctionDistance() < speed)
                 makeTurn();
         }
-        System.out.println(this);
+        //System.out.println(this);
     }
 
     /*

@@ -1,11 +1,11 @@
 import javafx.scene.canvas.Canvas;
 
-public interface IMapViewer extends Runnable
+public interface IMapViewer
 {
     /*
         Tranforms MapSchema to Canvas format, drawable on screen
      */
-    public Canvas show();
+    public void show(Canvas canvas);
 
     public MapSchema getMapSchema();
 

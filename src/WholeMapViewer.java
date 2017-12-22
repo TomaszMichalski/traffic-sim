@@ -18,15 +18,10 @@ public class WholeMapViewer implements IMapViewer
         OFFSET = Math.abs(screenSize.getHeight() - screenSize.getWidth())/2;
     }
 
-    public void run()
+    public void show(Canvas canvas)
     {
-        while(true)
-            show();
-    }
-
-    public Canvas show()
-    {
-        Canvas canvas = new Canvas(screenSize.getWidth(), screenSize.getHeight());
+        canvas.setWidth(screenSize.getWidth());
+        canvas.setHeight(screenSize.getHeight());
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.DARKGREEN);
         gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
@@ -66,7 +61,6 @@ public class WholeMapViewer implements IMapViewer
                 }
             }
         }
-        return canvas;
     }
 
     public MapSchema getMapSchema()
