@@ -29,9 +29,11 @@ public class SimulationEngine implements ISimulationEngine
             @Override
             public void handle(long now)
             {
+                System.out.println("Started frame");
                 moveVehicles();
                 checkCollisions();
                 mapViewer.show(canvas);
+                System.out.println("Ended frame");
             }
         }.start();
     }

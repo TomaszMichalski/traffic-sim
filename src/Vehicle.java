@@ -35,9 +35,15 @@ public abstract class Vehicle
         Junction incomingJunction = getIncomingJunction();
         double distance;
         if(currentRoad.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //for horizontal roads
-            distance = Math.abs(incomingJunction.getPosX() - posX);
+        {
+            if(orientation == VehicleOrientation.VO_EAST) distance = incomingJunction.getPosX() - posX;
+            else distance = posX - incomingJunction.getPosX();
+        }
         else //for vertical roads
-            distance = Math.abs(incomingJunction.getPosY() - posY);
+        {
+            if(orientation == VehicleOrientation.VO_NORTH) distance = posY - incomingJunction.getPosY();
+            else distance = incomingJunction.getPosY() - posY;
+        }
         return distance;
     }
 
