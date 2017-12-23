@@ -5,19 +5,6 @@ public class CollisionEngine implements ICollisionEngine
         mapViewer = viewer;
     }
 
-    public void run()
-    {
-        while(true)
-        {
-            for(Vehicle vehicle : mapViewer.getMapSchema().getVehicles())
-            {
-                if(!checkVehicleCollision(vehicle) || !checkJunctionPass(vehicle))
-                    vehicle.halt(true);
-                else vehicle.halt(false);
-            }
-        }
-    }
-
     public boolean checkJunctionPass(Vehicle vehicle)
     {
         //getting next junction
@@ -26,7 +13,7 @@ public class CollisionEngine implements ICollisionEngine
         //getting distance to the junction
         double distance = vehicle.getIncomingJunctionDistance();
         //stopping the car if there is passage is blocked ("red light")
-        if(distance < mapViewer.getJunctionSize()) {
+        if(distance <= mapViewer.getJunctionSize()) {
             if ((currentRoad.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL
                     && incomingJunction.getPassage() == Junction.Passage.PASSAGE_VERTICAL)
                     || (currentRoad.getOrientation() == Road.RoadOrientation.RO_VERTICAL

@@ -15,7 +15,7 @@ public class SimpleJunctionGenerator implements IMapGenerator
         Junction northJunction = new Junction(150,50);
 
         Road east = new Road(150,150,250,150);
-        Junction eastJunction = new Junction(200,150);
+        Junction eastJunction = new Junction(250,150);
 
         Road south = new Road(150,150, 150,250);
         Junction southJunction = new Junction(150,250);
@@ -52,16 +52,22 @@ public class SimpleJunctionGenerator implements IMapGenerator
         }
         //add roads to schema
         mapSchema.addRoad(north);
+        System.out.println(north);
         mapSchema.addRoad(east);
+        System.out.println(east);
         mapSchema.addRoad(south);
+        System.out.println(south);
         mapSchema.addRoad(west);
+        System.out.println(west);
         //add junctions to schema
         mapSchema.addJunction(northJunction);
         mapSchema.addJunction(eastJunction);
         mapSchema.addJunction(southJunction);
         mapSchema.addJunction(westJunction);
         mapSchema.addJunction(mainJunction);
-        Car[] cars = { new Car(north), new Car(north), new Car(south), new Car(east), new Car(east), new Car(west), new Car(west), new Car(west) };
+        //Car[] cars = { new Car(north), new Car(north), new Car(south), new Car(east), new Car(east), new Car(west), new Car(west), new Car(west),
+            //new Car(west), new Car(east), new Car(north), new Car(south) };
+        Car[] cars = { new Car(north), new Car(south), new Car(north), new Car(south),new Car(north), new Car(south),new Car(north), new Car(south)};
         for(Car car : cars)
         {
             System.out.println(car);

@@ -1,7 +1,7 @@
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
-public abstract class Vehicle implements Runnable
+public abstract class Vehicle
 {
     public Vehicle(Road road)
     {

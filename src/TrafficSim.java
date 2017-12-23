@@ -18,7 +18,7 @@ public class TrafficSim extends Application
         primaryStage.setTitle("Traffic Sim");
 
         //set implementation of simulation engine
-        simulationEngine = new SimulationEngine(WholeMapViewer.class, SimpleRoadGenerator.class, CollisionEngine.class);
+        simulationEngine = new SimulationEngine(WholeMapViewer.class, SimpleJunctionGenerator.class, CollisionEngine.class);
 
         //create root node
         Group root = new Group();

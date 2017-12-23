@@ -24,19 +24,32 @@ public class SimulationEngine implements ISimulationEngine
 
     public void run()
     {
-        for (Vehicle vehicle : mapViewer.getMapSchema().getVehicles()) {
-            new Thread(vehicle).start();
-        }
-        new Thread(collisionEngine).start();
-
         new AnimationTimer()
         {
             @Override
             public void handle(long now)
             {
+                moveVehicles();
+                checkCollisions();
                 mapViewer.show(canvas);
             }
         }.start();
+    }
+
+    private void checkCollisions()
+    {
+        for(Vehicle vehicle : mapViewer.getMapSchema().getVehicles())
+        {
+            vehicle.halt(!collisionEngine.checkJunctionPass(vehicle) || !collisionEngine.checkVehicleCollision(vehicle));
+        }
+    }
+
+    private void moveVehicles()
+    {
+        for(Vehicle vehicle : mapViewer.getMapSchema().getVehicles())
+        {
+            vehicle.move();
+        }
     }
 
     private IMapViewer mapViewer;

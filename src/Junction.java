@@ -160,6 +160,11 @@ public class Junction
         return posY;
     }
 
+    public String toString()
+    {
+        return "Junction [x=" + posX + ",y=" + posY + ",size=" + getSize() + "," + passage + "]";
+    }
+
     private ArrayList<Road> connectors;
     private double posX;
     private double posY;

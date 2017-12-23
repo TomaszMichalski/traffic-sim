@@ -77,7 +77,8 @@ public class Road
     public String toString()
     {
         return "Road [startX=" + roadLine.getStartX() + ",startY=" + roadLine.getStartY() + ",endX=" + roadLine.getEndX()
-                + ",endY=" + roadLine.getEndY() + "," + orientation + "]";
+                + ",endY=" + roadLine.getEndY() + "," + orientation + "]\n" + startJunction.toString()
+                + "\n" + endJunction.toString();
     }
 
     private Line roadLine;

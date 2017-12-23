@@ -1,4 +1,4 @@
-public interface ICollisionEngine extends Runnable
+public interface ICollisionEngine
 {
     public boolean checkVehicleCollision(Vehicle vehicle);
 

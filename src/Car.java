@@ -35,21 +35,18 @@ public class Car extends Vehicle
         int g = rand.nextInt(255);
         int b = rand.nextInt(255);
         color = Color.rgb(r,g,b);
-        speed = 0.01;
+        speed = 2.5;
         halt = false;
         randomizeIntention();
-    }
-
-    public void run()
-    {
-        while(true)
-            move();
     }
 
     protected void move()
     {
         if(!halt)
         {
+            //if the car is closing to a junction, perform a turn-action
+            if(getIncomingJunctionDistance() <= speed)
+                makeTurn();
             //drive forward
             if(orientation == VehicleOrientation.VO_NORTH)
                 posY -= speed;
@@ -59,9 +56,6 @@ public class Car extends Vehicle
                 posY += speed;
             else if(orientation == VehicleOrientation.VO_WEST)
                 posX -= speed;
-            //if the car is closing to a junction, perform a turn-action
-            if(getIncomingJunctionDistance() < speed)
-                makeTurn();
         }
         //System.out.println(this);
     }
@@ -77,7 +71,12 @@ public class Car extends Vehicle
         {
             if(incomingJunction.getStraight(currentRoad) != null) //if there is such road
             {
-
+                Road next = incomingJunction.getStraight(currentRoad);
+                currentRoad = next;
+                if(orientation == VehicleOrientation.VO_NORTH) posY -= speed;
+                else if(orientation == VehicleOrientation.VO_SOUTH) posY += speed;
+                else if(orientation == VehicleOrientation.VO_WEST) posX -= speed;
+                else if(orientation == VehicleOrientation.VO_EAST) posX += speed;
             }
             else
             {
