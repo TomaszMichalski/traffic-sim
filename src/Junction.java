@@ -8,8 +8,8 @@ public class Junction
         this.posX = posX;
         this.posY = posY;
         passage = Passage.PASSAGE_ALL;
-        //sets the traffic light change delay to random value between 5 and 10 seconds (the value is stored in nanoseconds)
-        TRAFFIC_LIGTH_DELAY = (long)((new Random().nextInt(5) + 5) * 1e9);
+        //sets the traffic light change delay to random value between 1 and 4 seconds (the value is stored in nanoseconds)
+        TRAFFIC_LIGTH_DELAY = (long)((new Random().nextInt(3) + 1) * 1e9);
     }
 
     /*
