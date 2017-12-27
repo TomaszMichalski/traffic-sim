@@ -26,10 +26,6 @@ public class CollisionEngine implements ICollisionEngine
                     || (currentRoad.getOrientation() == Road.RoadOrientation.RO_VERTICAL
                     && incomingJunction.getPassage() == Junction.Passage.PASSAGE_HORIZONTAL))
                 return false;
-            if(vehicle instanceof Car && ((Car)vehicle).getIntention() == Car.Intention.LEFT)
-            {
-                return false;
-            }
         }
         return true;
     }

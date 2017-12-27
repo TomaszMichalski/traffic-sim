@@ -61,8 +61,6 @@ public class SimulationEngine implements ISimulationEngine
         }
     }
 
-    private long past;
-
     /*
         Checks vehicle collisions and halts the vehicles if needed
      */

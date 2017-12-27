@@ -1,5 +1,10 @@
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
+
+/*
+    Simple implementation of abstract Vehicle, which brings no new elements to Vehicle mechanisms
+    other than setting speed to non-zero value and color to random value and randomizing
+    entity's spawn location on a road
+ */
 
 import java.util.Random;
 
@@ -40,123 +45,8 @@ public class Car extends Vehicle
         randomizeIntention();
     }
 
-    protected void move()
-    {
-        if(!halt)
-        {
-            //if the car is closing to a junction, perform a turn-action
-            if(getIncomingJunctionDistance() <= speed)
-                makeTurn();
-            //drive forward
-            if(orientation == VehicleOrientation.VO_NORTH)
-                posY -= speed;
-            else if(orientation == VehicleOrientation.VO_EAST)
-                posX += speed;
-            else if(orientation == VehicleOrientation.VO_SOUTH)
-                posY += speed;
-            else if(orientation == VehicleOrientation.VO_WEST)
-                posX -= speed;
-        }
-        //System.out.println(this);
-    }
-
-    /*
-        Performs an action based on the car'c current Intention value
-        If intended action cannot be performed, car changes it's intention and tries to perform the turn again
-     */
-    protected void makeTurn()
-    {
-        Junction incomingJunction = getIncomingJunction();
-        if(intention == Intention.STRAIGHT)
-        {
-            if(incomingJunction.getStraight(currentRoad) != null) //if there is such road
-            {
-                Road next = incomingJunction.getStraight(currentRoad);
-                currentRoad = next;
-                randomizeIntention();
-            }
-            else
-            {
-                if(incomingJunction.getSize() == 1) //if the road is a dead end
-                {
-                    //perform a turnaround
-                    if(orientation == VehicleOrientation.VO_NORTH) orientation = VehicleOrientation.VO_SOUTH;
-                    else if(orientation == VehicleOrientation.VO_SOUTH) orientation = VehicleOrientation.VO_NORTH;
-                    else if(orientation == VehicleOrientation.VO_WEST) orientation = VehicleOrientation.VO_EAST;
-                    else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_WEST;
-                    randomizeIntention();
-                }
-                else
-                {
-                    randomizeIntention();
-                    makeTurn();
-                }
-            }
-        }
-        else if(intention == Intention.LEFT)
-        {
-            if(incomingJunction.getLeft(currentRoad) != null) //if there is such road
-            {
-                Road next = incomingJunction.getLeft(currentRoad);
-                currentRoad = next;
-                if(orientation == VehicleOrientation.VO_NORTH) orientation = VehicleOrientation.VO_WEST;
-                else if(orientation == VehicleOrientation.VO_SOUTH) orientation = VehicleOrientation.VO_EAST;
-                else if(orientation == VehicleOrientation.VO_WEST) orientation = VehicleOrientation.VO_SOUTH;
-                else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_NORTH;
-                randomizeIntention();
-            }
-            else
-            {
-                randomizeIntention();
-                makeTurn();
-            }
-        }
-        else if(intention == Intention.RIGHT)
-        {
-            if(incomingJunction.getRight(currentRoad) != null) //if there is such road
-            {
-                Road next = incomingJunction.getRight(currentRoad);
-                currentRoad = next;
-                if(orientation == VehicleOrientation.VO_NORTH) orientation = VehicleOrientation.VO_EAST;
-                else if(orientation == VehicleOrientation.VO_SOUTH) orientation = VehicleOrientation.VO_WEST;
-                else if(orientation == VehicleOrientation.VO_WEST) orientation = VehicleOrientation.VO_NORTH;
-                else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_SOUTH;
-                randomizeIntention();
-            }
-            else
-            {
-                randomizeIntention();
-                makeTurn();
-            }
-        }
-    }
-
-    private void randomizeIntention()
-    {
-        Random rand = new Random();
-        int random = rand.nextInt();
-        if(random % 3 == 0) intention = Intention.RIGHT;
-        else if(random % 3 == 1) intention = Intention.STRAIGHT;
-        else intention = Intention.RIGHT;
-        System.out.println("Randomized intention to " + intention);
-    }
-
-    public Intention getIntention()
-    {
-        return intention;
-    }
-
     public String toString()
     {
         return "Car [x=" + posX + ",y=" + posY + "," + orientation + ",color=" + color + "," + halt + "," + intention + "]";
     }
-
-    public enum Intention
-    {
-        STRAIGHT,
-        LEFT,
-        RIGHT
-    }
-
-    private Intention intention;
 }
