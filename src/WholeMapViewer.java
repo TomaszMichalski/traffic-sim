@@ -5,6 +5,9 @@ import javafx.stage.Screen;
 import javafx.scene.shape.*;
 /*
     The whole map is displayed as a single image - no slider bars or displaying only a part of it
+    Displayed map schema is scaled based on screen size
+    Roads are displayed as black thick lines
+    Displays only vehicles which are an instance of Car class
  */
 
 public class WholeMapViewer implements IMapViewer

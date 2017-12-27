@@ -1,6 +1,11 @@
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
+/*
+    Abstract class for the concrete implementations of vehicle entities to inherit from.
+    Contains some basic calculation-methods which are common for every vehicle entity
+ */
+
 public abstract class Vehicle
 {
     public Vehicle(Road road)
@@ -90,41 +95,69 @@ public abstract class Vehicle
         return incomingJunction;
     }
 
+    /*
+        Sets the halt flag for the vehicle - if it is true, then the car should not move
+     */
     public void halt(boolean halt)
     {
         this.halt = halt;
     }
 
+    /*
+        Returns the current road the vehicle is on
+     */
     public Road getCurrentRoad()
     {
         return currentRoad;
     }
 
+    /*
+        Returns current vehicle orientation
+     */
     public VehicleOrientation getOrientation()
     {
         return orientation;
     }
 
+    /*
+        Sets the vehicle orientation as given in the parameter
+     */
     public void setOrientation(VehicleOrientation newOrientation)
     {
         orientation = newOrientation;
     }
 
+    /*
+        Returns the color of the vehicle as a Paint object
+     */
     public Paint getColor()
     {
         return color;
     }
 
+    /*
+        Returns x-coord of the vehicle position
+        (0,0) is the upper left corner of the map
+        Coord is always greater or equal to 0
+     */
     public double getPosX()
     {
         return posX;
     }
 
+    /*
+        Returns y-coord of the vehicle position
+        (0,0) is the upper left corner of the map
+        Coord is always greater or equal to 0
+     */
     public double getPosY()
     {
         return posY;
     }
 
+    /*
+        Stores vehicle's possible orientations - north, east, south and west
+     */
     public enum VehicleOrientation
     {
         VO_NORTH,

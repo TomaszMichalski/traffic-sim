@@ -14,16 +14,25 @@ public class MapSchema
         SIZE = size;
     }
 
+    /*
+        Adds a new road to the schema
+     */
     public void addRoad(Road road)
     {
         roads.add(road);
     }
 
+    /*
+        Adds a new junction to the schema
+     */
     public void addJunction(Junction junction)
     {
         junctions.add(junction);
     }
 
+    /*
+        Adds a new vehicle to the schema
+     */
     public void addVehicle(Vehicle vehicle)
     {
         vehicles.add(vehicle);

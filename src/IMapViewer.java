@@ -7,6 +7,9 @@ public interface IMapViewer
      */
     public void show(Canvas canvas);
 
+    /*
+        Returns the map schema in MapSchema format
+     */
     public MapSchema getMapSchema();
 
     /*

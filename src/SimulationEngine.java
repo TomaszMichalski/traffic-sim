@@ -1,6 +1,10 @@
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 
+/*
+    Basic implementation of ISimulationEngine
+ */
+
 public class SimulationEngine implements ISimulationEngine
 {
     public SimulationEngine(Class mapViewer, Class mapGenerator, Class collisionEngine)
@@ -16,12 +20,18 @@ public class SimulationEngine implements ISimulationEngine
             e.printStackTrace();
         }
     }
-
+    /*
+        Sets the application canvas for the simulation engine's map viewer drawing purposes
+     */
     public void setCanvas(Canvas canvas)
     {
         this.canvas = canvas;
     }
 
+    /*
+        Launches the simulation, creating an Animation Timer which performs every important simulation actions
+        and checks during the frame
+     */
     public void run()
     {
         new AnimationTimer()
@@ -38,6 +48,9 @@ public class SimulationEngine implements ISimulationEngine
         }.start();
     }
 
+    /*
+        Checks vehicle collisions and halts the vehicles if needed
+     */
     private void checkCollisions()
     {
         for(Vehicle vehicle : mapViewer.getMapSchema().getVehicles())
@@ -46,6 +59,9 @@ public class SimulationEngine implements ISimulationEngine
         }
     }
 
+    /*
+        Moves every vehicle
+     */
     private void moveVehicles()
     {
         for(Vehicle vehicle : mapViewer.getMapSchema().getVehicles())

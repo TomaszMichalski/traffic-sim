@@ -1,3 +1,7 @@
+/*
+    Basic implementation of ICollisionEngine
+ */
+
 public class CollisionEngine implements ICollisionEngine
 {
     public CollisionEngine(IMapViewer viewer)
@@ -5,6 +9,9 @@ public class CollisionEngine implements ICollisionEngine
         mapViewer = viewer;
     }
 
+    /*
+        Returns boolean value of whether a vehicle can pass the next junction
+     */
     public boolean checkJunctionPass(Vehicle vehicle)
     {
         //getting next junction
@@ -12,7 +19,7 @@ public class CollisionEngine implements ICollisionEngine
         Road currentRoad = vehicle.getCurrentRoad();
         //getting distance to the junction
         double distance = vehicle.getIncomingJunctionDistance();
-        //stopping the car if there is passage is blocked ("red light")
+        //stopping the vehicle if there is passage is blocked ("red light") and the vehicle is close to the junction
         if(distance <= mapViewer.getJunctionSize()) {
             if ((currentRoad.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL
                     && incomingJunction.getPassage() == Junction.Passage.PASSAGE_VERTICAL)
@@ -23,6 +30,9 @@ public class CollisionEngine implements ICollisionEngine
         return true;
     }
 
+    /*
+        Performs a check for a vehicle if it is possible for it to move forward
+     */
     public boolean checkVehicleCollision(Vehicle vehicle)
     {
         Road currentRoad = vehicle.getCurrentRoad();
