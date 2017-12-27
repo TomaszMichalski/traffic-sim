@@ -95,10 +95,9 @@ public class MapGenerator implements IMapGenerator
         {
             mapSchema.addVehicle(new Car(mapSchema.getRoads().get(rand.nextInt(mapSchema.getRoads().size()))));
         }
-        for(int i = 0; i < 5; i++)
-        {
-            mapSchema.addVehicle(new SuperFastBike(mapSchema.getRoads().get(rand.nextInt(mapSchema.getRoads().size()))));
-        }
+        mapSchema.addVehicle(new SuperFastBike(start));
+        mapSchema.addVehicle(new SuperFastBike(leftNorth));
+        mapSchema.addVehicle(new SuperFastBike(rightNorth));
 
         return mapSchema;
     }

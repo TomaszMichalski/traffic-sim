@@ -16,6 +16,9 @@ public abstract class Vehicle
         //default position
         posX = road.getRoadLine().getStartX();
         posY = road.getRoadLine().getStartY();
+        //set default orientation
+        if(road.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) orientation = VehicleOrientation.VO_EAST;
+        if(road.getOrientation() == Road.RoadOrientation.RO_VERTICAL) orientation = VehicleOrientation.VO_NORTH;
         //default halt status
         halt = false;
         //default entity color

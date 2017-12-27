@@ -13,7 +13,7 @@ public class SuperFastBike extends Vehicle
     {
         super(road);
         color = Color.RED;
-        speed = 10.0;
+        speed = 7.5;
     }
 
     protected void randomizeIntention()
