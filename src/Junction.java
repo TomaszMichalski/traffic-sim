@@ -8,6 +8,8 @@ public class Junction
         this.posX = posX;
         this.posY = posY;
         passage = Passage.PASSAGE_ALL;
+        //sets the traffic light change delay to random value between 5 and 10 seconds (the value is stored in nanoseconds)
+        TRAFFIC_LIGTH_DELAY = (long)((new Random().nextInt(5) + 5) * 1e9);
     }
 
     /*
@@ -131,12 +133,22 @@ public class Junction
     /*
         Changes passage state - from "green light" to "red light" and from "red light" to "green light"
         If junction has passage state of "pass all" then function has no effect
+        Overwrites the previous passage change time to now param value
      */
-    public void changePassage()
+    public void changePassage(long now)
     {
         if(passage == Passage.PASSAGE_ALL) return;
         if(passage == Passage.PASSAGE_HORIZONTAL) passage = Passage.PASSAGE_VERTICAL;
         else if(passage == Passage.PASSAGE_VERTICAL) passage = Passage.PASSAGE_HORIZONTAL;
+        previousPassageChangeTime = now;
+    }
+
+    /*
+        Returns time at which the passage changed last time as a long value
+     */
+    public long getPreviousPassageChangeTime()
+    {
+        return previousPassageChangeTime;
     }
 
     /*
@@ -160,6 +172,11 @@ public class Junction
         return posY;
     }
 
+    public long getTrafficLightDelay()
+    {
+        return TRAFFIC_LIGTH_DELAY;
+    }
+
     public String toString()
     {
         return "Junction [x=" + posX + ",y=" + posY + ",size=" + getSize() + "," + passage + "]";
@@ -169,4 +186,6 @@ public class Junction
     private double posX;
     private double posY;
     private Passage passage;
+    private final long TRAFFIC_LIGTH_DELAY;
+    private long previousPassageChangeTime;
 }

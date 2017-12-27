@@ -137,7 +137,7 @@ public class Car extends Vehicle
 
     public String toString()
     {
-        return "Car [x=" + posX + ",y=" + posY + "," + orientation + ",color=" + color + "," + halt + "]";
+        return "Car [x=" + posX + ",y=" + posY + "," + orientation + ",color=" + color + "," + halt + "," + intention + "]";
     }
 
     public enum Intention

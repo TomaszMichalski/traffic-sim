@@ -39,14 +39,29 @@ public class SimulationEngine implements ISimulationEngine
             @Override
             public void handle(long now)
             {
-                System.out.println("Started frame");
                 moveVehicles();
                 checkCollisions();
                 mapViewer.show(canvas);
-                System.out.println("Ended frame");
+                changeTrafficLights(now);
             }
         }.start();
     }
+
+    /*
+        Changes junctions' traffic light if the actual light change delay is greater or equal to junction's traffic light delay
+     */
+    private void changeTrafficLights(long now)
+    {
+        for(Junction junction : mapViewer.getMapSchema().getJunctions())
+        {
+            if(now - junction.getPreviousPassageChangeTime() >= junction.getTrafficLightDelay())
+            {
+                junction.changePassage(now);
+            }
+        }
+    }
+
+    private long past;
 
     /*
         Checks vehicle collisions and halts the vehicles if needed
