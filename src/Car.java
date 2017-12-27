@@ -73,10 +73,7 @@ public class Car extends Vehicle
             {
                 Road next = incomingJunction.getStraight(currentRoad);
                 currentRoad = next;
-                if(orientation == VehicleOrientation.VO_NORTH) posY -= speed;
-                else if(orientation == VehicleOrientation.VO_SOUTH) posY += speed;
-                else if(orientation == VehicleOrientation.VO_WEST) posX -= speed;
-                else if(orientation == VehicleOrientation.VO_EAST) posX += speed;
+                randomizeIntention();
             }
             else
             {
@@ -87,6 +84,7 @@ public class Car extends Vehicle
                     else if(orientation == VehicleOrientation.VO_SOUTH) orientation = VehicleOrientation.VO_NORTH;
                     else if(orientation == VehicleOrientation.VO_WEST) orientation = VehicleOrientation.VO_EAST;
                     else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_WEST;
+                    randomizeIntention();
                 }
                 else
                 {
@@ -99,7 +97,13 @@ public class Car extends Vehicle
         {
             if(incomingJunction.getLeft(currentRoad) != null) //if there is such road
             {
-
+                Road next = incomingJunction.getLeft(currentRoad);
+                currentRoad = next;
+                if(orientation == VehicleOrientation.VO_NORTH) orientation = VehicleOrientation.VO_WEST;
+                else if(orientation == VehicleOrientation.VO_SOUTH) orientation = VehicleOrientation.VO_EAST;
+                else if(orientation == VehicleOrientation.VO_WEST) orientation = VehicleOrientation.VO_SOUTH;
+                else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_NORTH;
+                randomizeIntention();
             }
             else
             {
@@ -111,7 +115,13 @@ public class Car extends Vehicle
         {
             if(incomingJunction.getRight(currentRoad) != null) //if there is such road
             {
-
+                Road next = incomingJunction.getRight(currentRoad);
+                currentRoad = next;
+                if(orientation == VehicleOrientation.VO_NORTH) orientation = VehicleOrientation.VO_EAST;
+                else if(orientation == VehicleOrientation.VO_SOUTH) orientation = VehicleOrientation.VO_WEST;
+                else if(orientation == VehicleOrientation.VO_WEST) orientation = VehicleOrientation.VO_NORTH;
+                else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_SOUTH;
+                randomizeIntention();
             }
             else
             {
@@ -125,9 +135,10 @@ public class Car extends Vehicle
     {
         Random rand = new Random();
         int random = rand.nextInt();
-        if(random % 3 == 0) intention = Intention.LEFT;
+        if(random % 3 == 0) intention = Intention.RIGHT;
         else if(random % 3 == 1) intention = Intention.STRAIGHT;
         else intention = Intention.RIGHT;
+        System.out.println("Randomized intention to " + intention);
     }
 
     public Intention getIntention()

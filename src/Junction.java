@@ -53,31 +53,10 @@ public class Junction
      */
     public Road getLeft(Road current)
     {
-        for(Road connector : connectors)
-        {
-            if(current.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //for horizontal roads
-            {
-                if(connector.getOrientation() == Road.RoadOrientation.RO_VERTICAL) //seek for vertical connectors
-                {
-                    if(connector.getRoadLine().getStartY() > current.getRoadLine().getStartY() //if the road lies below then it's y-coord is greater
-                            || connector.getRoadLine().getEndY() > current.getRoadLine().getStartY())
-                    {
-                        return connector;
-                    }
-                }
-            }
-            else //for vertical roads
-            {
-                if(connector.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //seek for horizontal connectors
-                {
-                    if(connector.getRoadLine().getStartX() < current.getRoadLine().getStartX() //if the road lies on the left then it's x-coord is smaller
-                            || connector.getRoadLine().getEndX() < current.getRoadLine().getStartX())
-                    {
-                        return connector;
-                    }
-                }
-            }
-        }
+        if(current.equals(getNorthConnector())) return getEastConnector();
+        if(current.equals(getEastConnector())) return getSouthConnector();
+        if(current.equals(getSouthConnector())) return getWestConnector();
+        if(current.equals(getWestConnector())) return getNorthConnector();
         return null;
     }
 
@@ -87,30 +66,61 @@ public class Junction
      */
     public Road getRight(Road current)
     {
+        if(current.equals(getNorthConnector())) return getWestConnector();
+        if(current.equals(getEastConnector())) return getNorthConnector();
+        if(current.equals(getSouthConnector())) return getEastConnector();
+        if(current.equals(getWestConnector())) return getSouthConnector();
+        return null;
+    }
+    /*
+        Returns junction's north connector
+        If it does not exist, returns null
+     */
+    private Road getNorthConnector()
+    {
         for(Road connector : connectors)
         {
-            if(current.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //for horizontal roads
-            {
-                if(connector.getOrientation() == Road.RoadOrientation.RO_VERTICAL) //seek for vertical connectors
-                {
-                    if(connector.getRoadLine().getStartY() < current.getRoadLine().getStartY() //if the road lies abowe then it's y-coord is smaller
-                            || connector.getRoadLine().getEndY() < current.getRoadLine().getStartY())
-                    {
-                        return connector;
-                    }
-                }
-            }
-            else //for vertical roads
-            {
-                if(connector.getOrientation() == Road.RoadOrientation.RO_HORIZONTAL) //seek for horizontal connectors
-                {
-                    if(connector.getRoadLine().getStartX() > current.getRoadLine().getStartX() //if the road lies on the right then it's x-coord is greater
-                            || connector.getRoadLine().getEndX() > current.getRoadLine().getStartX())
-                    {
-                        return connector;
-                    }
-                }
-            }
+            if(connector.getRoadLine().getStartY() < posY || connector.getRoadLine().getEndY() < posY)
+                return connector;
+        }
+        return null;
+    }
+    /*
+        Returns junction's east connector
+        If it does not exist, returns null
+     */
+    private Road getEastConnector()
+    {
+        for(Road connector : connectors)
+        {
+            if(connector.getRoadLine().getStartX() > posX || connector.getRoadLine().getEndX() > posX)
+                return connector;
+        }
+        return null;
+    }
+    /*
+        Returns junction's south connector
+        If it does not exist, returns null
+     */
+    private Road getSouthConnector()
+    {
+        for(Road connector : connectors)
+        {
+            if(connector.getRoadLine().getStartY() > posY || connector.getRoadLine().getEndY() > posY)
+                return connector;
+        }
+        return null;
+    }
+    /*
+        Returns junction's west connector
+        If it does not exist, returns null
+     */
+    private Road getWestConnector()
+    {
+        for(Road connector : connectors)
+        {
+            if(connector.getRoadLine().getStartX() < posX || connector.getRoadLine().getEndX() < posX)
+                return connector;
         }
         return null;
     }

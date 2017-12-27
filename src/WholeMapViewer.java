@@ -44,22 +44,22 @@ public class WholeMapViewer implements IMapViewer
                 gc.setFill(car.getColor());
                 if(car.getOrientation() == Vehicle.VehicleOrientation.VO_NORTH)
                 {
-                    gc.fillRect(car.getPosX() * SCALE + OFFSET, car.getPosY() * SCALE,
+                    gc.fillRect(car.getCurrentRoad().getRoadLine().getStartX() * SCALE + OFFSET, car.getPosY() * SCALE,
                                 LINE_WIDTH / 2 * SCALE, LINE_WIDTH * SCALE);
                 }
                 else if(car.getOrientation() == Vehicle.VehicleOrientation.VO_EAST)
                 {
-                    gc.fillRect((car.getPosX() - LINE_WIDTH) * SCALE + OFFSET, car.getPosY() * SCALE,
+                    gc.fillRect((car.getPosX() - LINE_WIDTH) * SCALE + OFFSET, car.getCurrentRoad().getRoadLine().getStartY() * SCALE,
                                     LINE_WIDTH * SCALE, LINE_WIDTH / 2 * SCALE);
                 }
                 else if(car.getOrientation() == Vehicle.VehicleOrientation.VO_SOUTH)
                 {
-                    gc.fillRect( (car.getPosX() - LINE_WIDTH / 2) * SCALE + OFFSET, (car.getPosY() - LINE_WIDTH) * SCALE,
+                    gc.fillRect( (car.getCurrentRoad().getRoadLine().getStartX() - LINE_WIDTH / 2) * SCALE + OFFSET, (car.getPosY() - LINE_WIDTH) * SCALE,
                                     LINE_WIDTH / 2 * SCALE, LINE_WIDTH * SCALE);
                 }
                 else if(car.getOrientation() == Vehicle.VehicleOrientation.VO_WEST)
                 {
-                    gc.fillRect( car.getPosX() * SCALE + OFFSET, (car.getPosY() - LINE_WIDTH / 2) * SCALE,
+                    gc.fillRect( car.getPosX() * SCALE + OFFSET, (car.getCurrentRoad().getRoadLine().getStartY() - LINE_WIDTH / 2) * SCALE,
                                         LINE_WIDTH * SCALE, LINE_WIDTH / 2 * SCALE);
                 }
             }

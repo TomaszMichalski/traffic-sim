@@ -81,6 +81,25 @@ public class Road
                 + "\n" + endJunction.toString();
     }
 
+    public boolean equals(Object o)
+    {
+        if(o instanceof Road)
+        {
+            Road r = (Road)o;
+            if(r == this) return true;
+            else if((r.getRoadLine().getStartX() == this.getRoadLine().getStartX() &&
+                    r.getRoadLine().getStartY() == this.getRoadLine().getStartY() &&
+                    r.getRoadLine().getEndX() == this.getRoadLine().getEndX() &&
+                    r.getRoadLine().getEndY() == this.getRoadLine().getEndY()) ||
+                    (r.getRoadLine().getStartX() == this.getRoadLine().getEndX() &&
+                     r.getRoadLine().getStartY() == this.getRoadLine().getEndY() &&
+                     r.getRoadLine().getEndX() == this.getRoadLine().getStartX() &&
+                     r.getRoadLine().getEndY() == this.getRoadLine().getStartY()))
+                return true;
+        }
+        return false;
+    }
+
     private Line roadLine;
     private RoadOrientation orientation;
     //junctions are defined by MapSchema addRoad() method
