@@ -41,8 +41,6 @@ public class Car extends Vehicle
         int b = rand.nextInt(255);
         color = Color.rgb(r,g,b);
         speed = 2.5;
-        halt = false;
-        randomizeIntention();
     }
 
     public String toString()

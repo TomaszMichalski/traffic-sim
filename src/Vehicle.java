@@ -22,6 +22,8 @@ public abstract class Vehicle
         color = Color.WHITE;
         //default speed
         speed = 0;
+        halt = false;
+        randomizeIntention();
     }
 
     protected void move()

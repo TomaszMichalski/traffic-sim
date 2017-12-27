@@ -7,14 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c65290f-282a-4168-8036-41fc3f446304" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/CollisionEngine.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/CollisionEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Road.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/Road.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/WholeMapViewer.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/WholeMapViewer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SuperFastBike.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Car.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/Car.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Junction.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/Junction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/MapGenerator.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/MapGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/SimulationEngine.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/SimulationEngine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TrafficSim/TrafficSim.class" afterPath="$PROJECT_DIR$/out/production/TrafficSim/TrafficSim.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Car.java" afterPath="$PROJECT_DIR$/src/Car.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CollisionEngine.java" afterPath="$PROJECT_DIR$/src/CollisionEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimulationEngine.java" afterPath="$PROJECT_DIR$/src/SimulationEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MapGenerator.java" afterPath="$PROJECT_DIR$/src/MapGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vehicle.java" afterPath="$PROJECT_DIR$/src/Vehicle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WholeMapViewer.java" afterPath="$PROJECT_DIR$/src/WholeMapViewer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +32,8 @@
       <file leaf-file-name="TrafficSim.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TrafficSim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="20" column="84" lean-forward="false" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
+            <state relative-caret-position="101">
+              <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,7 +44,7 @@
       <file leaf-file-name="SimpleJunctionGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimpleJunctionGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="221">
               <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
               <folding />
             </state>
@@ -51,8 +54,8 @@
       <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="-1528">
+              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,7 +66,7 @@
       <file leaf-file-name="SimulationEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimulationEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="986">
               <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -74,40 +77,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WholeMapViewer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WholeMapViewer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="61" column="112" lean-forward="false" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Junction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Junction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="56" column="66" lean-forward="true" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+            <state relative-caret-position="170">
+              <caret line="10" column="77" lean-forward="false" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
               <folding>
-                <element signature="e#5192#5193#0" expanded="true" />
-                <element signature="e#5240#5241#0" expanded="true" />
-                <element signature="e#5749#5750#0" expanded="true" />
-                <element signature="e#5791#5792#0" expanded="true" />
+                <element signature="e#5191#5192#0" expanded="true" />
+                <element signature="e#5239#5240#0" expanded="true" />
+                <element signature="e#5748#5749#0" expanded="true" />
+                <element signature="e#5790#5791#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CollisionEngine.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CollisionEngine.java">
+      <file leaf-file-name="WholeMapViewer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/WholeMapViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            <state relative-caret-position="1195">
+              <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
               <folding>
-                <element signature="e#0#3865#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,7 +107,7 @@
       <file leaf-file-name="Road.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Road.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
+            <state relative-caret-position="625">
               <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
               <folding />
             </state>
@@ -126,8 +117,8 @@
       <file leaf-file-name="MapGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MapGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="272">
+              <caret line="99" column="121" lean-forward="false" selection-start-line="99" selection-start-column="121" selection-end-line="99" selection-end-column="121" />
               <folding />
             </state>
           </provider>
@@ -136,10 +127,23 @@
       <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="257">
+              <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="124" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperFastBike.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SuperFastBike.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+              <folding>
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,20 +185,21 @@
         <option value="$PROJECT_DIR$/src/SimScene.java" />
         <option value="$PROJECT_DIR$/src/IVehicle.java" />
         <option value="$PROJECT_DIR$/src/SimpleRoadGenerator.java" />
-        <option value="$PROJECT_DIR$/src/TrafficSim.java" />
         <option value="$PROJECT_DIR$/src/ICollisionEngine.java" />
         <option value="$PROJECT_DIR$/src/IMapViewer.java" />
         <option value="$PROJECT_DIR$/src/ISimulationEngine.java" />
         <option value="$PROJECT_DIR$/src/MapSchema.java" />
-        <option value="$PROJECT_DIR$/src/MapGenerator.java" />
         <option value="$PROJECT_DIR$/src/SimpleJunctionGenerator.java" />
         <option value="$PROJECT_DIR$/src/Road.java" />
-        <option value="$PROJECT_DIR$/src/Junction.java" />
-        <option value="$PROJECT_DIR$/src/WholeMapViewer.java" />
-        <option value="$PROJECT_DIR$/src/Car.java" />
         <option value="$PROJECT_DIR$/src/SimulationEngine.java" />
-        <option value="$PROJECT_DIR$/src/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/CollisionEngine.java" />
+        <option value="$PROJECT_DIR$/src/TrafficSim.java" />
+        <option value="$PROJECT_DIR$/src/Junction.java" />
+        <option value="$PROJECT_DIR$/src/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/Car.java" />
+        <option value="$PROJECT_DIR$/src/SuperFastBike.java" />
+        <option value="$PROJECT_DIR$/src/MapGenerator.java" />
+        <option value="$PROJECT_DIR$/src/WholeMapViewer.java" />
       </list>
     </option>
   </component>
@@ -382,7 +387,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1141046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20065789" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27467105" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967105" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -459,7 +464,11 @@
     <MESSAGE value="some commentary" />
     <MESSAGE value="added traffic light changes" />
     <MESSAGE value="added right turn possibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="added right turn possibility" />
+    <MESSAGE value="added turn possibilities" />
+    <MESSAGE value="changed random traffic light change delay to 1-4 sec" />
+    <MESSAGE value="added basic implementation" />
+    <MESSAGE value="changed used implementation of IMapGenerator to MapGenerator" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed used implementation of IMapGenerator to MapGenerator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -468,25 +477,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SimpleRoadGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#1708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Junction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="e#5192#5193#0" expanded="true" />
-            <element signature="e#5240#5241#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-            <element signature="e#5791#5792#0" expanded="true" />
+            <element signature="e#5191#5192#0" expanded="true" />
+            <element signature="e#5239#5240#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5790#5791#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -577,10 +576,10 @@
         <state relative-caret-position="68">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="e#5192#5193#0" expanded="true" />
-            <element signature="e#5240#5241#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-            <element signature="e#5791#5792#0" expanded="true" />
+            <element signature="e#5191#5192#0" expanded="true" />
+            <element signature="e#5239#5240#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5790#5791#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -661,10 +660,10 @@
         <state relative-caret-position="68">
           <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="e#5192#5193#0" expanded="true" />
-            <element signature="e#5240#5241#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-            <element signature="e#5791#5792#0" expanded="true" />
+            <element signature="e#5191#5192#0" expanded="true" />
+            <element signature="e#5239#5240#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5790#5791#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -819,76 +818,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TrafficSim.java">
+    <entry file="file://$PROJECT_DIR$/src/CollisionEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="20" column="84" lean-forward="false" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
+        <state relative-caret-position="217">
+          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#3865#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Junction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="56" column="66" lean-forward="true" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
-          <folding>
-            <element signature="e#5192#5193#0" expanded="true" />
-            <element signature="e#5240#5241#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-            <element signature="e#5791#5792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Road.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimpleJunctionGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="221">
           <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WholeMapViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="61" column="112" lean-forward="false" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SimulationEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="986">
           <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -898,22 +848,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
+    <entry file="file://$PROJECT_DIR$/src/TrafficSim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="101">
+          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CollisionEngine.java">
+    <entry file="file://$PROJECT_DIR$/src/Road.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="625">
+          <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Junction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="77" lean-forward="false" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
           <folding>
-            <element signature="e#0#3865#0" expanded="true" />
+            <element signature="e#5191#5192#0" expanded="true" />
+            <element signature="e#5239#5240#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5790#5791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="124" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1528">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuperFastBike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MapGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="99" column="121" lean-forward="false" selection-start-line="99" selection-start-column="121" selection-end-line="99" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WholeMapViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1195">
+          <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

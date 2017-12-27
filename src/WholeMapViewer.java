@@ -63,6 +63,31 @@ public class WholeMapViewer implements IMapViewer
                                         LINE_WIDTH * SCALE, LINE_WIDTH / 2 * SCALE);
                 }
             }
+            else if(vehicle instanceof SuperFastBike)
+            {
+                SuperFastBike sfb = (SuperFastBike)vehicle;
+                gc.setFill(sfb.getColor());
+                if(sfb.getOrientation() == Vehicle.VehicleOrientation.VO_NORTH)
+                {
+                    gc.fillRect(sfb.getCurrentRoad().getRoadLine().getStartX() * SCALE + OFFSET, sfb.getPosY() * SCALE,
+                            LINE_WIDTH / 4 * SCALE, LINE_WIDTH * SCALE);
+                }
+                else if(sfb.getOrientation() == Vehicle.VehicleOrientation.VO_EAST)
+                {
+                    gc.fillRect((sfb.getPosX() - LINE_WIDTH) * SCALE + OFFSET, sfb.getCurrentRoad().getRoadLine().getStartY() * SCALE,
+                            LINE_WIDTH * SCALE, LINE_WIDTH / 4 * SCALE);
+                }
+                else if(sfb.getOrientation() == Vehicle.VehicleOrientation.VO_SOUTH)
+                {
+                    gc.fillRect( (sfb.getCurrentRoad().getRoadLine().getStartX() - LINE_WIDTH / 4) * SCALE + OFFSET, (sfb.getPosY() - LINE_WIDTH) * SCALE,
+                            LINE_WIDTH / 4 * SCALE, LINE_WIDTH * SCALE);
+                }
+                else if(sfb.getOrientation() == Vehicle.VehicleOrientation.VO_WEST)
+                {
+                    gc.fillRect( sfb.getPosX() * SCALE + OFFSET, (sfb.getCurrentRoad().getRoadLine().getStartY() - LINE_WIDTH / 4) * SCALE,
+                            LINE_WIDTH * SCALE, LINE_WIDTH / 4 * SCALE);
+                }
+            }
         }
     }
 
@@ -76,6 +101,10 @@ public class WholeMapViewer implements IMapViewer
         if(vehicle instanceof Car)
         {
             return LINE_WIDTH*1.2;
+        }
+        else if(vehicle instanceof SuperFastBike)
+        {
+            return LINE_WIDTH*2.0;
         }
         else return 0;
     }
