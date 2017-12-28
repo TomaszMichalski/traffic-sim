@@ -73,6 +73,51 @@ public class MapGenerator implements IMapGenerator
         {
             e.printStackTrace();
         }
+        //create a single curve
+        Road northEastRight = new Road(rightNorth.getEndJunction().getPosX(), rightNorth.getEndJunction().getPosY(),
+                rightNorth.getEndJunction().getPosX() + minRoadLength, rightNorth.getEndJunction().getPosY());
+        try
+        {
+            northEastRight.setJunctions(rightNorth.getEndJunction(), northEastRight.getEndJunction());
+        }
+        catch(JunctionCoordException e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            rightNorth.getEndJunction().addConnector(northEastRight);
+            northEastRight.getEndJunction().addConnector(northEastRight);
+        }
+        catch(RoadCoordException e)
+        {
+            e.printStackTrace();
+        }
+        //create a three-way junction
+        Road threeWayNorth = new Road(leftWest.getEndJunction().getPosX(), leftWest.getEndJunction().getPosY(),
+                leftWest.getEndJunction().getPosX(), leftWest.getEndJunction().getPosY()-minRoadLength*2);
+        Road threeWaySouth = new Road(leftWest.getEndJunction().getPosX(), leftWest.getEndJunction().getPosY(),
+                leftWest.getEndJunction().getPosX(), leftWest.getEndJunction().getPosY()+minRoadLength);
+        try
+        {
+            threeWayNorth.setJunctions(leftWest.getEndJunction(), threeWayNorth.getEndJunction());
+            threeWaySouth.setJunctions(leftWest.getEndJunction(), threeWaySouth.getEndJunction());
+        }
+        catch(JunctionCoordException e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            threeWayNorth.getEndJunction().addConnector(threeWayNorth);
+            threeWaySouth.getEndJunction().addConnector(threeWaySouth);
+            leftWest.getEndJunction().addConnector(threeWayNorth);
+            leftWest.getEndJunction().addConnector(threeWaySouth);
+        }
+        catch(RoadCoordException e)
+        {
+            e.printStackTrace();
+        }
         //add junctions to the schema
         mapSchema.addJunction(left);
         mapSchema.addJunction(leftNorth.getEndJunction());
@@ -82,6 +127,9 @@ public class MapGenerator implements IMapGenerator
         mapSchema.addJunction(rightNorth.getEndJunction());
         mapSchema.addJunction(rightEast.getEndJunction());
         mapSchema.addJunction(rightSouth.getEndJunction());
+        mapSchema.addJunction(northEastRight.getEndJunction());
+        mapSchema.addJunction(threeWayNorth.getEndJunction());
+        mapSchema.addJunction(threeWaySouth.getEndJunction());
         //add roads to the schema
         mapSchema.addRoad(start);
         mapSchema.addRoad(leftNorth);
@@ -90,6 +138,12 @@ public class MapGenerator implements IMapGenerator
         mapSchema.addRoad(rightNorth);
         mapSchema.addRoad(rightEast);
         mapSchema.addRoad(rightSouth);
+        mapSchema.addRoad(northEastRight);
+        mapSchema.addRoad(threeWayNorth);
+        mapSchema.addRoad(threeWaySouth);
+
+        for(Road r : mapSchema.getRoads())
+            System.out.println(r);
 
         for(int i = 0; i < 40; i++)
         {
