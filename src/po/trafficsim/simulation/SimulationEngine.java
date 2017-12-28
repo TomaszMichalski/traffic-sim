@@ -1,5 +1,13 @@
+package po.trafficsim.simulation;
+
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
+import po.trafficsim.viewer.*;
+import po.trafficsim.schema.*;
+import po.trafficsim.generator.*;
+import po.trafficsim.collision.*;
+import po.trafficsim.world.*;
+import po.trafficsim.vehicle.*;
 
 /*
     Basic implementation of ISimulationEngine

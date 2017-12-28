@@ -1,4 +1,8 @@
+package po.trafficsim.schema;
+
+import po.trafficsim.world.*;
 import java.util.*;
+import po.trafficsim.vehicle.*;
 
 /*
     Contains and manages the schema of map, which is then processed to the implementation of IMapViewer

@@ -1,3 +1,10 @@
+package po.trafficsim.generator;
+
+import po.trafficsim.schema.*;
+import po.trafficsim.world.*;
+import po.trafficsim.exception.*;
+import po.trafficsim.vehicle.*;
+
 /*
     Generates a map with a single road
     Very basic case of world generation, mainly for early test purposes

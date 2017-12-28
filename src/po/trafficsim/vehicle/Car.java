@@ -1,4 +1,8 @@
+package po.trafficsim.vehicle;
+
 import javafx.scene.paint.Color;
+
+import po.trafficsim.world.*;
 
 /*
     Simple implementation of abstract Vehicle, which brings no new elements to Vehicle mechanisms

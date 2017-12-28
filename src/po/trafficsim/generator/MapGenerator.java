@@ -1,4 +1,10 @@
+package po.trafficsim.generator;
+
 import java.util.Random;
+import po.trafficsim.schema.*;
+import po.trafficsim.world.*;
+import po.trafficsim.exception.*;
+import po.trafficsim.vehicle.*;
 
 /*
     Default generation algorithm for project presentation

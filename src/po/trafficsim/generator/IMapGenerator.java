@@ -1,3 +1,7 @@
+package po.trafficsim.generator;
+
+import po.trafficsim.schema.*;
+
 public interface IMapGenerator
 {
     /*

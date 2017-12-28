@@ -1,3 +1,10 @@
+package po.trafficsim.generator;
+
+import po.trafficsim.schema.*;
+import po.trafficsim.world.*;
+import po.trafficsim.exception.*;
+import po.trafficsim.vehicle.*;
+
 /*
     Generates a simple four-way junction
     Mainly for collision and junction passage purposes

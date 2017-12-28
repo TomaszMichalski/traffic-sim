@@ -1,3 +1,5 @@
+package po.trafficsim;
+
 import javafx.scene.*;
 
 public class SimScene extends Scene

@@ -1,3 +1,9 @@
+package po.trafficsim.collision;
+
+import po.trafficsim.viewer.*;
+import po.trafficsim.world.*;
+import po.trafficsim.vehicle.*;
+
 /*
     Basic implementation of ICollisionEngine
  */

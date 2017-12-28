@@ -1,7 +1,13 @@
+package po.trafficsim;
+
 import javafx.application.*;
 import javafx.scene.canvas.Canvas;
 import javafx.stage.*;
 import javafx.scene.*;
+import po.trafficsim.simulation.*;
+import po.trafficsim.viewer.*;
+import po.trafficsim.generator.*;
+import po.trafficsim.collision.*;
 
 public class TrafficSim extends Application
 {

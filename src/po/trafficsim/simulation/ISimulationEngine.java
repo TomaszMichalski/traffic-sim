@@ -1,3 +1,5 @@
+package po.trafficsim.simulation;
+
 import javafx.scene.canvas.Canvas;
 
 public interface ISimulationEngine

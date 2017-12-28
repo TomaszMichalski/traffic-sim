@@ -1,3 +1,7 @@
+package po.trafficsim.collision;
+
+import po.trafficsim.vehicle.Vehicle;
+
 public interface ICollisionEngine
 {
     /*

@@ -1,8 +1,13 @@
+package po.trafficsim.viewer;
+
 import javafx.geometry.*;
 import javafx.scene.canvas.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.scene.shape.*;
+import po.trafficsim.schema.*;
+import po.trafficsim.vehicle.*;
+import po.trafficsim.world.*;
 /*
     The whole map is displayed as a single image - no slider bars or displaying only a part of it
     Displayed map schema is scaled based on screen size

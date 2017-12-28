@@ -1,4 +1,8 @@
+package po.trafficsim.viewer;
+
 import javafx.scene.canvas.Canvas;
+import po.trafficsim.schema.*;
+import po.trafficsim.vehicle.*;
 
 public interface IMapViewer
 {

@@ -1,4 +1,7 @@
+package po.trafficsim.world;
+
 import javafx.scene.shape.Line;
+import po.trafficsim.exception.*;
 
 public class Road
 {

@@ -1,4 +1,7 @@
+package po.trafficsim.vehicle;
+
 import javafx.scene.paint.Color;
+import po.trafficsim.world.*;
 
 /*
     Implementation of abstract Vehicle class
@@ -9,7 +12,7 @@ import javafx.scene.paint.Color;
 
 public class SuperFastBike extends Vehicle
 {
-    SuperFastBike(Road road)
+    public SuperFastBike(Road road)
     {
         super(road);
         color = Color.RED;
