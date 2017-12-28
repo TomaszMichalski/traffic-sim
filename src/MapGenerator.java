@@ -27,6 +27,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(JunctionCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         try
@@ -57,6 +58,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(JunctionCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         try
@@ -82,6 +84,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(JunctionCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         try
@@ -105,6 +108,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(JunctionCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         try

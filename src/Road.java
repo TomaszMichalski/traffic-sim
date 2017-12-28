@@ -12,16 +12,7 @@ public class Road
         else if(Math.abs(startX - endX) < 10e-6) //startY - endY
             orientation = RoadOrientation.RO_VERTICAL;
         //set default junctions
-        Junction defStart = new Junction(startX, startY);
-        Junction defEnd = new Junction(endX, endY);
-        try
-        {
-            setJunctions(defStart, defEnd);
-        }
-        catch(JunctionCoordException e)
-        {
-            e.printStackTrace();
-        }
+        setDefaultJunctions();
     }
 
     public Line getRoadLine()
@@ -48,7 +39,25 @@ public class Road
             endJunction = s;
             startJunction = e;
         }
-        else throw new JunctionCoordException();
+        else
+        {
+            setDefaultJunctions();
+            throw new JunctionCoordException("Junction coordinates do not match road coordinates. Junctions reset to default");
+        }
+    }
+
+    public void setDefaultJunctions()
+    {
+        Junction defStart = new Junction(roadLine.getStartX(), roadLine.getStartY());
+        Junction defEnd = new Junction(roadLine.getEndX(), roadLine.getEndY());
+        try
+        {
+            setJunctions(defStart, defEnd);
+        }
+        catch(JunctionCoordException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public Junction getStartJunction()
