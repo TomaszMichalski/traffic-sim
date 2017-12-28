@@ -106,7 +106,8 @@ public class Road
                     (r.getRoadLine().getStartX() == this.getRoadLine().getEndX() &&
                      r.getRoadLine().getStartY() == this.getRoadLine().getEndY() &&
                      r.getRoadLine().getEndX() == this.getRoadLine().getStartX() &&
-                     r.getRoadLine().getEndY() == this.getRoadLine().getStartY()))
+                     r.getRoadLine().getEndY() == this.getRoadLine().getStartY()) &&
+                            (r.startJunction == this.startJunction && r.endJunction == this.endJunction))
                 return true;
         }
         return false;
