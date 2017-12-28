@@ -22,6 +22,7 @@ public class TrafficSim extends Application
         primaryStage.setResizable(false);
         primaryStage.setTitle("Traffic Sim");
 
+        Provider.init();
         simulationEngine = new SimulationEngine(Provider.getMapViewerInstance(), Provider.getMapGeneratorInstance(), Provider.getCollisionEngineInstance());
 
         //create root node
@@ -33,6 +34,8 @@ public class TrafficSim extends Application
         //create scene and add it to the stage
         simScene = new SimScene(root);
         primaryStage.setScene(simScene);
+
+        simulationEngine.run();
 
         primaryStage.show();
     }
