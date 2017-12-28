@@ -5,14 +5,13 @@ import javafx.scene.canvas.Canvas;
 import javafx.stage.*;
 import javafx.scene.*;
 import po.trafficsim.simulation.*;
-import po.trafficsim.viewer.*;
-import po.trafficsim.generator.*;
-import po.trafficsim.collision.*;
+import po.trafficsim.ioc.Provider;
 
 public class TrafficSim extends Application
 {
     public static void main(String[] args)
     {
+        //launching javafx app
         launch(args);
     }
 
@@ -23,8 +22,7 @@ public class TrafficSim extends Application
         primaryStage.setResizable(false);
         primaryStage.setTitle("Traffic Sim");
 
-        //set implementation of simulation engine
-        simulationEngine = new SimulationEngine(WholeMapViewer.class, MapGenerator.class, CollisionEngine.class);
+        simulationEngine = new SimulationEngine(Provider.getMapViewerInstance(), Provider.getMapGeneratorInstance(), Provider.getCollisionEngineInstance());
 
         //create root node
         Group root = new Group();
@@ -35,8 +33,6 @@ public class TrafficSim extends Application
         //create scene and add it to the stage
         simScene = new SimScene(root);
         primaryStage.setScene(simScene);
-
-        simulationEngine.run();
 
         primaryStage.show();
     }

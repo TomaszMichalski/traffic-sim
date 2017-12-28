@@ -3,7 +3,6 @@ package po.trafficsim.simulation;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 import po.trafficsim.viewer.*;
-import po.trafficsim.schema.*;
 import po.trafficsim.generator.*;
 import po.trafficsim.collision.*;
 import po.trafficsim.world.*;
@@ -15,18 +14,11 @@ import po.trafficsim.vehicle.*;
 
 public class SimulationEngine implements ISimulationEngine
 {
-    public SimulationEngine(Class mapViewer, Class mapGenerator, Class collisionEngine)
+    public SimulationEngine(IMapViewer mapViewer, IMapGenerator mapGenerator, ICollisionEngine collisionEngine)
     {
-        try
-        {
-            this.mapGenerator = (IMapGenerator)mapGenerator.getConstructor().newInstance();
-            this.mapViewer = (IMapViewer)mapViewer.getConstructor(MapSchema.class).newInstance(this.mapGenerator.generate());
-            this.collisionEngine = (ICollisionEngine)collisionEngine.getConstructor(IMapViewer.class).newInstance(this.mapViewer);
-        }
-        catch(ReflectiveOperationException e)
-        {
-            e.printStackTrace();
-        }
+        this.mapViewer = mapViewer;
+        this.mapGenerator = mapGenerator;
+        this.collisionEngine = collisionEngine;
     }
     /*
         Sets the application canvas for the simulation engine's map viewer drawing purposes

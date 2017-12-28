@@ -7,31 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c65290f-282a-4168-8036-41fc3f446304" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/JunctionCoordException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/MapGenerator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Road$RoadOrientation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Road.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Vehicle.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Car.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/CollisionEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/ICollisionEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/IMapGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/IMapViewer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/ISimulationEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Junction$Passage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/Junction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/MapSchema.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/RoadCoordException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/SimScene.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/SimpleJunctionGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/SimpleRoadGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/SimulationEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/TrafficSim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TrafficSim/WholeMapViewer.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Car.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/vehicle/Car.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/CollisionEngine.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/collision/CollisionEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ICollisionEngine.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/collision/ICollisionEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/IMapGenerator.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/generator/IMapGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/IMapViewer.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/viewer/IMapViewer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ISimulationEngine.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/simulation/ISimulationEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Junction.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/world/Junction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/JunctionCoordException.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/exception/JunctionCoordException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MapGenerator.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/generator/MapGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MapSchema.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/schema/MapSchema.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Road.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/world/Road.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RoadCoordException.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/exception/RoadCoordException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SimScene.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/SimScene.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SimpleJunctionGenerator.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/generator/SimpleJunctionGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SimpleRoadGenerator.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/generator/SimpleRoadGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SimulationEngine.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SuperFastBike.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/vehicle/SuperFastBike.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/TrafficSim.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/WholeMapViewer.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/viewer/WholeMapViewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java" afterPath="$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,14 +37,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TrafficSim.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TrafficSim.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Provider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/po/trafficsim/ioc/Provider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ISimulationEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/po/trafficsim/simulation/ISimulationEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/po/trafficsim/vehicle/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="284" column="5" lean-forward="true" selection-start-line="284" selection-start-column="5" selection-end-line="284" selection-end-column="5" />
+            <state relative-caret-position="391">
+              <caret line="23" column="78" lean-forward="true" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8525#8526#0" expanded="true" />
@@ -86,32 +108,8 @@
       <file leaf-file-name="SimulationEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-816">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Junction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/po/trafficsim/world/Junction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Road.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/po/trafficsim/world/Road.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            <state relative-caret-position="-34">
+              <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,15 +220,17 @@
         <option value="$PROJECT_DIR$/src/po/trafficsim/generator/SimpleJunctionGenerator.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/generator/SimpleRoadGenerator.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/schema/MapSchema.java" />
-        <option value="$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/vehicle/Car.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/viewer/IMapViewer.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/viewer/WholeMapViewer.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/world/Junction.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/world/Road.java" />
-        <option value="$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/vehicle/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/po/trafficsim/vehicle/SuperFastBike.java" />
+        <option value="$PROJECT_DIR$/src/Provider.java" />
+        <option value="$PROJECT_DIR$/src/po/trafficsim/ioc/Provider.java" />
+        <option value="$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java" />
+        <option value="$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java" />
       </list>
     </option>
   </component>
@@ -300,6 +300,13 @@
               <item name="traffic-sim" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="trafficsim" type="462c0819:PsiDirectoryNode" />
+              <item name="ioc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="traffic-sim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="traffic-sim" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="trafficsim" type="462c0819:PsiDirectoryNode" />
               <item name="schema" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -328,9 +335,9 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/IntelliJ/Projects/traffic-sim/src/Car.java" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -487,7 +494,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12335526" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12335526" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1141046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17038691" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -506,18 +513,18 @@
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21052632" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12335526" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1141046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17038691" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -576,7 +583,8 @@
     <MESSAGE value="additional features in map generating process" />
     <MESSAGE value="additional bugfix in turn method" />
     <MESSAGE value="refactored JunctionCoordException handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored JunctionCoordException handling" />
+    <MESSAGE value="packages added" />
+    <option name="LAST_COMMIT_MESSAGE" value="packages added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -585,16 +593,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/world/Junction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/po/trafficsim/world/Road.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -900,14 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/simulation/ISimulationEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/po/trafficsim/viewer/IMapViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -956,30 +946,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/po/trafficsim/generator/SimpleRoadGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-365">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1018,14 +988,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/po/trafficsim/vehicle/Vehicle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="284" column="5" lean-forward="true" selection-start-line="284" selection-start-column="5" selection-end-line="284" selection-end-column="5" />
+        <state relative-caret-position="391">
+          <caret line="23" column="78" lean-forward="true" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#8525#8526#0" expanded="true" />
             <element signature="e#8569#8570#0" expanded="true" />
             <element signature="e#9400#9401#0" expanded="true" />
             <element signature="e#9432#9433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/simulation/ISimulationEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/simulation/SimulationEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/ioc/Provider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/po/trafficsim/TrafficSim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
