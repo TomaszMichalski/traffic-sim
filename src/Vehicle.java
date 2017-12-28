@@ -74,10 +74,18 @@ public abstract class Vehicle
                     else if(orientation == VehicleOrientation.VO_EAST) orientation = VehicleOrientation.VO_WEST;
                     randomizeIntention();
                 }
-                else
+                else if(incomingJunction.getSize() == 2 || incomingJunction.getSize() == 3) //if the junction is a curve (or double curve)
                 {
-                    randomizeIntention();
-                    makeTurn();
+                    if(incomingJunction.getLeft(currentRoad) != null) //force the turn
+                    {
+                        intention = Intention.LEFT;
+                        makeTurn();
+                    }
+                    else if(incomingJunction.getRight(currentRoad) != null) //force the turn
+                    {
+                        intention = Intention.RIGHT;
+                        makeTurn();
+                    }
                 }
             }
         }
