@@ -95,6 +95,10 @@ public class Road
 
     public boolean equals(Object o)
     {
+        if(o == null)
+            return false;
+        if(o == this)
+            return true;
         if(o instanceof Road)
         {
             Road r = (Road)o;
