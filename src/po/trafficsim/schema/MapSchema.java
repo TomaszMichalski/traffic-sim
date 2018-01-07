@@ -12,9 +12,9 @@ public class MapSchema
 {
     public MapSchema(int size)
     {
-        roads = new ArrayList<Road>();
-        junctions = new ArrayList<Junction>();
-        vehicles = new ArrayList<Vehicle>();
+        roads = new ArrayList<>();
+        junctions = new ArrayList<>();
+        vehicles = new ArrayList<>();
         SIZE = size;
     }
 

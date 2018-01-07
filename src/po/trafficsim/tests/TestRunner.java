@@ -1,7 +1,6 @@
 package po.trafficsim.tests;
 
 import org.junit.*;
-import po.trafficsim.vehicle.*;
 import po.trafficsim.world.*;
 import po.trafficsim.exception.*;
 

@@ -7,12 +7,12 @@ public class Junction
 {
     public Junction(double posX, double posY)
     {
-        connectors = new ArrayList<Road>();
+        connectors = new ArrayList<>();
         this.posX = posX;
         this.posY = posY;
         passage = Passage.PASSAGE_ALL;
         //sets the traffic light change delay to random value between 1 and 4 seconds (the value is stored in nanoseconds)
-        TRAFFIC_LIGTH_DELAY = (long)((new Random().nextInt(3) + 1) * 1e9);
+        TRAFFIC_LIGHT_DELAY = (long)((new Random().nextInt(3) + 1) * 1e9);
     }
 
     /*
@@ -136,7 +136,7 @@ public class Junction
     }
 
     /*
-        Return current passsage state
+        Return current passage state
      */
     public Passage getPassage()
     {
@@ -187,7 +187,7 @@ public class Junction
 
     public long getTrafficLightDelay()
     {
-        return TRAFFIC_LIGTH_DELAY;
+        return TRAFFIC_LIGHT_DELAY;
     }
 
     public String toString()
@@ -199,6 +199,6 @@ public class Junction
     private double posX;
     private double posY;
     private Passage passage;
-    private final long TRAFFIC_LIGTH_DELAY;
+    private final long TRAFFIC_LIGHT_DELAY;
     private long previousPassageChangeTime;
 }

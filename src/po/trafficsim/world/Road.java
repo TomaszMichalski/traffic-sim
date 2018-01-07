@@ -24,7 +24,7 @@ public class Road
     }
 
     /*
-        Set juctions passed as parameters to the road
+        Set junctions passed as parameters to the road
         Matches junctions coords to start/end of road
         If coords do not match, JunctionCoordException is thrown
      */

@@ -7,21 +7,21 @@ import po.trafficsim.vehicle.*;
 public interface IMapViewer
 {
     /*
-        Tranforms MapSchema to Canvas format, drawable on screen
+        Transforms MapSchema to Canvas format, drawable on screen
      */
-    public void show(Canvas canvas);
+    void show(Canvas canvas);
 
     /*
         Returns the map schema in MapSchema format
      */
-    public MapSchema getMapSchema();
+    MapSchema getMapSchema();
 
     /*
         Returns viewer's set vehicle size (length) as used in the show() method
      */
-    public double getVehicleSize(Vehicle vehicle);
+    double getVehicleSize(Vehicle vehicle);
     /*
         Return viewer's set junction size as used in the show() method
      */
-    public double getJunctionSize();
+    double getJunctionSize();
 }
