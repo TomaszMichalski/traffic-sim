@@ -2,7 +2,7 @@ package po.trafficsim.ioc;
 
 import po.trafficsim.collision.CollisionEngine;
 import po.trafficsim.collision.ICollisionEngine;
-import po.trafficsim.generator.IMapGenerator;
+import po.trafficsim.generator.*;
 import po.trafficsim.generator.MapGenerator;
 import po.trafficsim.viewer.IMapViewer;
 import po.trafficsim.viewer.WholeMapViewer;
