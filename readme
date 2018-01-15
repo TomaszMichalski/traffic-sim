@@ -1,0 +1,12 @@
+Traffic Simulation
+
+Computer Science
+3rd Semester
+Object Oriented Programming
+
+To run the simulation:
+>java po.trafficsim.TrafficSim <provider-class-name>
+i.e
+>java po.trafficsim.TrafficSim po.trafficsim.ioc.Provider
+>java po.trafficsim.TrafficSim po.trafficsim.ioc.SRProvider
+>java po.trafficsim.TrafficSim po.trafficsim.ioc.SJProvider
