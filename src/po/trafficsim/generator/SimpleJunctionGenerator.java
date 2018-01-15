@@ -68,12 +68,10 @@ public class SimpleJunctionGenerator implements IMapGenerator
         mapSchema.addJunction(southJunction);
         mapSchema.addJunction(westJunction);
         mapSchema.addJunction(mainJunction);
-        System.out.println(mainJunction);
         Car[] cars = { new Car(north), new Car(north), new Car(south), new Car(east), new Car(east), new Car(west), new Car(west), new Car(west),
             new Car(west), new Car(east), new Car(north), new Car(south) };
         for(Car car : cars)
         {
-            System.out.println(car);
             mapSchema.addVehicle(car);
         }
 

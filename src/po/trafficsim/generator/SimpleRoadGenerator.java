@@ -42,12 +42,14 @@ public class SimpleRoadGenerator implements IMapGenerator
         }
         //add the road to the schema
         mapSchema.addRoad(road);
-        System.out.println(road);
         //add junctions to the schema
         mapSchema.addJunction(startJunction);
         mapSchema.addJunction(endJunction);
         //create some cars
         mapSchema.addVehicle(new SuperFastBike(road));
+        Car[] cars = { new Car(road), new Car(road), new Car(road) };
+        for(Car car : cars)
+            mapSchema.addVehicle(car);
 
         return mapSchema;
     }

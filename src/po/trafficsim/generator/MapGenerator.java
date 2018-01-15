@@ -152,9 +152,6 @@ public class MapGenerator implements IMapGenerator
         mapSchema.addRoad(threeWayNorth);
         mapSchema.addRoad(threeWaySouth);
 
-        for(Road r : mapSchema.getRoads())
-            System.out.println(r);
-
         for(int i = 0; i < 40; i++)
         {
             mapSchema.addVehicle(new Car(mapSchema.getRoads().get(rand.nextInt(mapSchema.getRoads().size()))));

@@ -2,16 +2,16 @@ package po.trafficsim.ioc;
 
 import po.trafficsim.collision.CollisionEngine;
 import po.trafficsim.collision.ICollisionEngine;
-import po.trafficsim.generator.*;
-import po.trafficsim.generator.MapGenerator;
+import po.trafficsim.generator.IMapGenerator;
 import po.trafficsim.viewer.IMapViewer;
 import po.trafficsim.viewer.WholeMapViewer;
+import po.trafficsim.generator.SimpleRoadGenerator;
 
-public class Provider implements IProvider
+public class SRProvider implements IProvider
 {
     public void init()
     {
-        mapGenerator = new MapGenerator();
+        mapGenerator = new SimpleRoadGenerator();
         mapViewer = new WholeMapViewer(mapGenerator.generate());
         collisionEngine = new CollisionEngine(mapViewer);
     }
