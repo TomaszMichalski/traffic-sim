@@ -45,7 +45,7 @@ public class Road
         else
         {
             setDefaultJunctions();
-            throw new JunctionCoordException("Junction coordinates do not match road coordinates. Junctions reset to default");
+            throw new JunctionCoordException();
         }
     }
 

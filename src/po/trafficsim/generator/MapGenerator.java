@@ -48,6 +48,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(RoadCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
 
@@ -79,6 +80,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(RoadCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         //create a single curve
@@ -100,6 +102,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(RoadCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         //create a three-way junction
@@ -126,6 +129,7 @@ public class MapGenerator implements IMapGenerator
         }
         catch(RoadCoordException e)
         {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         //add junctions to the schema

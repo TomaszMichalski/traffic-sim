@@ -2,8 +2,8 @@ package po.trafficsim.exception;
 
 public class JunctionCoordException extends Exception
 {
-    public JunctionCoordException(String message)
+    public JunctionCoordException()
     {
-        super(message);
+        super("Junctions coordinates does not match road start/end coordinates. Junctions reset to default.");
     }
 }
